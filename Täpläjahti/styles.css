@@ -1,0 +1,331 @@
+/* Global font setup */
+@font-face {
+    font-family: "TimKid";
+    src: url("TimKid.ttf") format("truetype");
+}
+
+/* General styles */
+body {
+    margin: 0;
+    font-family: TimKid, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #dbcfb1;
+}
+
+/* Center content */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+.topnav {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1000px;
+    background-color: #102f34;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: top 0.3s ease-in-out;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+/* Hide navbar on scroll down */
+.hide-navbar {
+    top: -100px;
+}
+
+/* Current tab text (Hidden on desktop, visible on mobile when menu is closed) */
+#currentTab {
+    color: #f2f2f2;
+    font-size: 2em;
+    display: none;
+}
+
+/* Navigation links */
+.topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 14px;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+/* Hover and active state */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 5px;
+}
+
+.topnav a.active {
+    background-color: #2f8735;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Hamburger menu icon */
+.topnav .icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 800px) {
+    .topnav {
+        max-width: 1000px;
+        width: 100%;
+        margin-top: 10px; /* Adds a small gap on top of navbar */
+    }
+
+    #currentTab {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .topnav {
+        left: 0;
+        transform: none;
+        max-width: 100%;
+        padding: 10px;
+        border-radius: 0;
+        top: 0; /* Remove gap on mobile */
+    }
+
+    .topnav a {
+        font-size: 1.5em;
+        padding: 12px;
+    }
+
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        display: block;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .topnav.responsive {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    .topnav.responsive a {
+        display: block;
+        text-align: left;
+        width: 100%;
+    }
+
+    /* Add extra padding on top when menu is closed */
+    .tab-content {
+        padding-top: 100px;
+    }
+
+    /* Remove extra padding when the menu is open */
+    .topnav.responsive + .tab-content {
+        padding-top: 20px;
+    }
+
+    /* Show current tab text when menu is closed */
+    .topnav:not(.responsive) #currentTab {
+        display: block;
+    }
+
+    /* Hide current tab text when the menu is open */
+    .topnav.responsive #currentTab {
+        display: none;
+    }
+
+    /* Hide the hamburger menu toggle button when the menu is open */
+    .topnav.responsive .icon {
+        display: none;
+    }
+
+    .team-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .team-text {
+        max-width: 90%;  /* Allow the text to take up more width on mobile */
+        padding-right: 0;
+        margin-bottom: 20px;
+        text-align: center;  /* Ensure the text is centered */
+    }
+
+    .team-text h2 {
+        font-size: 2em;  /* Adjust the font size for smaller screens */
+        margin-bottom: 15px;
+    }
+
+    .team-text p {
+        font-size: 1.1em;  /* Adjust the font size for readability */
+    }
+
+    .team-image {
+        max-width: 100%;  /* Image takes up full width on mobile */
+        margin-top: 20px;  /* Space between text and image */
+    }
+
+    .cozycottage {
+        width: 100%;  /* Ensure the image takes up full width */
+        height: auto;
+    }
+}
+
+/* Hide all sections except the active one */
+.tab-content {
+    display: none;
+    padding: 100px 20px 20px; /* More padding when menu is closed */
+    text-align: center;
+    transition: padding-top 0.3s ease-in-out;
+}
+
+/* Show the active section */
+.active-tab {
+    display: block;
+}
+
+/* Team Section */
+.team-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on mobile */
+    align-items: center; /* Vertically align the content */
+    padding: 40px 20px;  /* Space between the sections */
+    max-width: 1000px; /* Ensure consistent width */
+    margin: 0 auto;
+    text-align: center; /* Center all text */
+}
+
+/* Text Styling */
+.team-text {
+    flex: 1; /* Allow the text to take up equal space */
+    padding-right: 20px;
+    max-width: 50%;  /* Ensure text doesn't take up too much space */
+}
+
+.team-text h2 {
+    font-size: 3em;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.team-text p {
+    font-size: 1.5em;
+    color: black;
+    line-height: 1.6;
+}
+
+/* Image Styling */
+.team-image {
+    flex: 1; /* Allow image to take up remaining space */
+    max-width: 45%; /* Limit image size */
+    margin-top: 20px;
+}
+
+.cozycottage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Members Section */
+.members-section {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 40px auto;  /* Added margin to space it from the team section */
+    text-align: center; /* Center the text */
+}
+
+/* Centered Heading for "Jäsenet" */
+.members-text h1 {
+    font-size: 3em;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Cards Container */
+.members-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;  /* Space between the cards */
+    margin-top: 20px;  /* Add space between heading and cards */
+    font-size: 1.5em;
+}
+
+/* Individual Member Card */
+.member-card {
+    background-color: #d49577;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 30%;  /* Each card will take up 30% of the container width */
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+/* Member Image */
+.member-img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Mobile View */
+@media screen and (max-width: 800px) {
+    .team-section {
+        flex-direction: column; /* Stack content vertically on mobile */
+        text-align: center; /* Center all text */
+    }
+
+    .team-text {
+        max-width: 90%; /* Allow the text to take up more width on mobile */
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .team-image {
+        max-width: 100%;  /* Image takes up full width on mobile */
+    }
+
+    .members-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .member-card {
+        width: 80%;  /* Card will take up 80% width on mobile */
+    }
+}
