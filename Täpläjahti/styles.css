@@ -122,11 +122,13 @@ body {
     }
 
     .topnav.responsive {
-        position: relative;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        position: fixed;
+        top: 0;
         width: 100%;
+        z-index: 1000;
     }
 
     .topnav.responsive .icon {
@@ -200,10 +202,6 @@ body {
     .footer {
         font-size: 1em;
         padding: 15px;
-    }
-    .partners.h1 {
-        padding-top: 80px;
-        margin-top: 80px;
     }
 }
 
@@ -319,6 +317,10 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding: 40px 20px;
+    margin-top: 10px;
+}
+.partners-container h1 {
+    font-size: 2.5em;
 }
 
 /* Logos Container */
