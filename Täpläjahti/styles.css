@@ -337,7 +337,7 @@ body {
 .partner-logos img {
     width: 80%; /* Takes half the width of navbar on desktop */
     height: auto; /* Maintain aspect ratio */
-    max-width: 500px; /* Prevent logos from getting too large */
+    max-width: 800px; /* Prevent logos from getting too large */
 }
 
 /* Partner Text */

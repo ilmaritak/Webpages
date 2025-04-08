@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Täpläjahti</title>
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="topnav" id="myTopnav">
+        <span id="currentTab" class="current-tab-mobile">Etusivu</span>
+        <a href="javascript:void(0);" class="active" onclick="openTab('home', event)">Etusivu</a>
+        <a href="javascript:void(0);" onclick="openTab('team', event)">Kehitystiimi</a>
+        <a href="javascript:void(0);" onclick="openTab('partners', event)">Yhteistyökumppanit</a>
+        <a href="https://webpages.tuni.fi/24tiko/">Peliportaaliin</a>
+        <a href="index_en.html">In English</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!-- Content Sections -->
+    <div id="home" class="tab-content active-tab">
+        <h1>Tervetuloa Täpläjahtiin!</h1>
+        <p>Coming soon...</p>
+        <img src="images/sieni_walk.gif">
+    </div>
+
+    <div id="team" class="tab-content">
+        <div class="team-section">
+            <div class="team-text">
+                <h2>Me olemme CozyCottage</h2>
+                <p>Neljän tietonkäsittelijän ryhmä löi päänsä yhteen ja syntyi CozyCottage.
+                    Yhdessä kaikkien vahvuuksia hyödyntäen pyrimme oppimaan mobiilipelikehityksen saloja,
+                    hauskanpitoa ja naurua kuitenkaan unohtamatta...
+                </p>
+            </div>
+            <div class="team-image">
+                <img src="images/cozycottage.webp" alt="cozycottage logo" class="cozycottage">
+            </div>
+            <div class="members-section">
+                <div class="members-text">
+                    <h1>Jäsenet</h1>
+                </div>
+                <div class="members-cards">
+                    <div class="member-card">
+                        <img src="images/404.webp" alt="kuva janinasta" class="member-img">
+                        <h3>Janina Valkonen</h3>
+                        <p>Artisti</p>
+                    </div>
+                    <div class="member-card">
+                        <img src="images/404.webp" alt="kuva kharonista" class="member-img">
+                        <h3>Kharon Saari</h3>
+                        <p>Artisti</p>
+                    </div>
+                    <div class="member-card">
+                        <img src="images/404.webp" alt="kuva anttonista" class="member-img">
+                        <h3>Antton Orpana</h3>
+                        <p>Koodari</p>
+                    </div>
+                    <div class="member-card">
+                        <img src="images/404.webp" alt="kuva ilmarista" class="member-img">
+                        <h3>Ilmari Takkunen</h3>
+                        <p>Koodari</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="partners" class="tab-content">
+        <div class="partners-container">
+            <!-- Logos -->
+            <h1>Yhteistyössä:</h1>
+            <div class="partner-logos">
+                <img src="images/yhtä.webp" alt="YHTÄ hankkeen logo">
+                <p>Pelin pääyhteistyökumppanina toimii Tampereen kaupungin YHTÄ hanke.</p>
+                <div class="partner-link">
+                    <a href="https://projects.tuni.fi/yhta" target="_blank">Lisätietoa</a>
+                </div>
+                <div class = other_partners>
+                    <img src="images/tiko_logo_musta_fin.webp" alt="tamk tietojenkäsittelyn logo">
+                    <img src="images/tamk.webp" alt="tamkin logo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Täpläjahti | Kaikki oikeudet pidätetään</p>
+            <p>Made by CozyCottage</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
