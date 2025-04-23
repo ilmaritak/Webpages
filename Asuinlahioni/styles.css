@@ -1,0 +1,92 @@
+
+body { /* General styles*/
+    text-align: center;
+    background-color: #EEEBE3;
+    margin: 0;
+    padding: 0;
+    font-family: "Inconsolata", monospace;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+h1 { /* Styles for Heading */
+    background-color: #EEEBE3;
+    color: #000000;
+    padding: 20px;
+    margin: 0;
+    margin-top: 150px;
+    font-size: 5em;
+    text-decoration: underline;
+} /* Slideshow container styles*/
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 40px;
+}
+.slide {
+    display: none;
+}
+.slide img { /* Styles for images*/
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+.description { /* padding for description of the images*/
+    padding: 15px;
+}
+.prev, .next { /* Arrows to change the image*/
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5);
+    text-decoration: none;
+}
+.prev { /* previous arrow*/
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+.next { /* next arrow*/
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover { /* arrow hover*/
+    background-color: rgba(0,0,0,0.8);
+}
+a { /* link styles*/
+    color: #000000;
+    text-decoration: underline;
+}
+a:hover { /* link hover styles*/
+    color: #adaaaa;
+}
+footer { /* footer styles*/
+    background-color: #f8f9fa; /* soft gray */
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #000000;
+    border-top: 1px solid #ddd;
+    margin-top: 200px;
+}
+
+footer a { /* e-mail*/
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+} /* e-mail hover*/
+footer a:hover {
+    text-decoration: underline;
+}

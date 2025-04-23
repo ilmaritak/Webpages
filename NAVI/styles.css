@@ -1,0 +1,139 @@
+body { /* Common styles for body*/
+    background-color: black;
+    margin: 0;
+}
+
+div {
+    text-align: center; /* Align the text to center by default*/
+}
+
+h1 { /* Main heading styles*/
+    font-family: Impact, sans-serif;
+    text-align: center;
+    font-weight: 200;
+    font-size: 3rem;
+    color: rgb(201, 185, 13);
+    margin: 30px;
+    padding-top: 50px;
+}
+
+p { /* Style for text*/
+    font-family: monospace;
+    color: white;
+    font-size: 1.5em;
+}
+img { /* This is for the team photo at the front page*/
+    width: 70%;
+    height: auto;
+    margin-top: 30px;
+}
+
+a { /* Link styles*/
+  display: block;
+  font-family: monospace;
+  color: white;
+  margin-top: 40px;
+  font-size: 1.2rem;
+}
+
+.information { /* Information text styles*/
+  font-family: monospace;
+  color: rgb(255, 255, 255);
+  margin: 20px auto;
+  max-width: 700px;
+  padding: 0 15px;
+}
+
+h2 { /* Styles for secondary headings*/
+    color: rgb(201, 185, 13);
+    font-family: monospace;
+    margin-top: 50px;
+    font-size: 2rem;
+    text-align: center;
+    font-family: Impact, sans-serif;
+    font-weight: 200;
+}
+
+.Players { /* Styles for player container */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.player { /* Styles for player card*/
+    background-color: #202020;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 200px;
+    text-align: center;
+    color: white;
+}
+
+.player img { /* Adjust player image size*/
+    width: 100%;
+    height: auto;
+}
+
+#navcontainer { /* Container for navbar*/
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#navlist { /* Navbar list styles*/
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    align-items: center;
+}
+
+#navlist li {
+    margin: 0;
+}
+
+#navlist li a { /*Indivudual tabs at the navbar*/
+    display: block;
+    padding: 0 1.5em;
+    height: 100%;
+    line-height: 50px;
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+#navlist li a:hover,
+#navlist li a#current { /* Tab gets highlighted when chosen or hovering over*/
+    background-color: rgb(100, 100, 100);
+}
+
+footer { /* Footer styles*/
+    background-color: rgb(40, 40, 40);
+    color: white;
+    text-align: center;
+    font-family: monospace;
+    font-size: 0.9rem;
+    padding: 15px 0;
+    margin-top:300px;
+}
+
+.gallery { /*Gallery container*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 30px 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery img { /* Gallery image*/
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
